@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema(
+const blogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
       required: true,
+      trim: true,
     },
     author: {
       type: String,
@@ -14,18 +15,16 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    blogImage: {
+    mediaUrl: {
       type: String,
-      required: true,
     },
-    blogVideo: {
+    cloudinary_id: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true },
 );
 
-const User = mongoose.model("User", userSchema);
+const Blog = mongoose.model("Blog", blogSchema);
 
-export default User;
+export default Blog;
