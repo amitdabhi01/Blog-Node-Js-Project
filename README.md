@@ -73,7 +73,7 @@ PR_BLOG_PROJECT/
 
 ⚙️ Installation & Setup
 Clone the repository
-git clone https://github.com/your-username/blog-api.git
+[git clone https://github.com/your-username/blog-api.git](https://github.com/amitdabhi01/Blog-Node-Js-Project)
 cd blog-api
 Install dependencies
 npm install
