@@ -24,28 +24,51 @@ Postman (API Testing)
 
 
 📂 Project Structure
+<br/>
 PR_BLOG_PROJECT/
+<br/>
 │
+<br/>
 ├── config/
+<br/>
 │   └── cloudinary.js
+<br/>
 │
+<br/>
 ├── controller/
+<br/>
 │   └── blogController.js
+<br/>
 │
+<br/>
 ├── middleware/
+<br/>
 │   ├── upload.js
+<br/>
 │   └── HttpError.js
+<br/>
 │
+<br/>
 ├── model/
+<br/>
 │   └── Blog.js
+<br/>
 │
+<br/>
 ├── routes/
+<br/>
 │   └── blogRoutes.js
+<br/>
 │
+<br/>
 ├── app.js
+<br/>
 ├── db.js
+<br/>
 ├── .env
+<br/>
 └── package.json
+<br/>
 
 
 ⚙️ Installation & Setup
