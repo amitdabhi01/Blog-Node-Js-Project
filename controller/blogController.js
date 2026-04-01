@@ -6,19 +6,24 @@ const createBlog = async (req, res, next) => {
   try {
     const { title, author, content } = req.body;
 
-    if (!req.file) {
-      return next(new HttpError("File image or video is required", 400));
+    const blogImage = req.files?.blogImage?.[0]?.path;
+    const blogVideo = req.files?.blogVideo?.[0]?.path;
+
+    if (!blogImage) {
+      return next(new HttpError("Blog Image is required", 400));
     }
 
-    const newBlog = new Blog.create({
+    const newBlog = await Blog.create({
       title,
       author,
       content,
-      mediaUrl: req.file.path,
-      cloudinary_id: req.file.filename,
+      blogImage,
+      blogVideo,
     });
 
-    res.status(201).json({ success: true, newBlog });
+    res
+      .status(201)
+      .json({ success: true, message: "Blog create successfully", newBlog });
   } catch (error) {
     next(new HttpError(error.message, 500));
   }
@@ -85,7 +90,7 @@ const updateBlog = async (req, res, next) => {
         await cloudinary.uploader.destroy(blog.cloudinary_id);
       }
 
-      blog.mediaUrl = req.file.path;
+      blog.blogImage = req.file.path;
 
       blog.cloudinary_id = req.file.filename;
     }

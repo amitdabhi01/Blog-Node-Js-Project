@@ -15,8 +15,9 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    mediaUrl: {
+    blogImage: {
       type: String,
+      required: true,
     },
     cloudinary_id: {
       type: String,

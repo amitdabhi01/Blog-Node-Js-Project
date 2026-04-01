@@ -5,13 +5,27 @@ import upload from "../middleware/upload.js";
 
 const router = express.Router();
 
-router.post("/add", upload.single("file"), blogController.createBlog);
+router.post(
+  "/add",
+  upload.fields([
+    { name: "blogImage", maxCount: 1 },
+    { name: "blogVideo", maxCount: 1 },
+  ]),
+  blogController.createBlog,
+);
 
 router.get("/allBlogs", blogController.getAllBlogs);
 
 router.get("/:id", blogController.getBlog);
 
-router.patch("/update/:id", upload.single(file), blogController.updateBlog);
+router.patch(
+  "/update/:id",
+  upload.fields([
+    { name: "blogImage", maxCount: 1 },
+    { name: "blogVideo", maxCount: 1 },
+  ]),
+  blogController.updateBlog,
+);
 
 router.delete("/delete/:id", blogController.deleteBlog);
 
