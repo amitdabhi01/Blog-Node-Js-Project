@@ -158,17 +158,26 @@ Response:
 
 
 📸 Media Handling
+<br/>
 Images & videos are uploaded using Multer
+<br/>
 Stored in Cloudinary
+<br/>
 Supports formats:
+<br/>
 Images: jpg, jpeg, png, webp
+<br/>
 Videos: mp4, mkv
 
 
 ⚠️ Error Handling
+<br/>
 Custom error class (HttpError)
+<br/>
 Centralized error middleware
+<br/>
 Proper status codes (400, 404, 500)
+<br/>
 
 
 🧪 API Testing
@@ -176,9 +185,13 @@ Proper status codes (400, 404, 500)
 All APIs are tested using Postman.
 
 ✨ Future Improvements
+<br/>
 Authentication (JWT)
+<br/>
 Pagination
+<br/>
 Comments & Likes
+<br/>
 User roles
 
 
