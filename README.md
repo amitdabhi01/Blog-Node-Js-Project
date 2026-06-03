@@ -132,10 +132,15 @@ PATCH /blog/update/:id
 <img width="1920" height="1080" alt="Screenshot 2026-04-01 143559" src="https://github.com/user-attachments/assets/f0e62441-804e-4b1c-a51d-6f5eccd7d90e" />
 
 Body (form-data):
+<br/>
 title
+<br/>
 author
+<br/>
 content
+<br/>
 blogImage (file)
+<br/>
 blogVideo (file)
 
 
