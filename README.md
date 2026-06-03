@@ -101,11 +101,17 @@ Response: "Hello from server"
 🔹 2. Create Blog
 POST /blog/add
 <img width="1920" height="1080" alt="Screenshot 2026-04-01 143541" src="https://github.com/user-attachments/assets/b1b75623-087b-433a-95dc-68dc9470f63a" />
+<br/>
 Body (form-data):
+<br/>
 title (text)
+<br/>
 author (text)
+<br/>
 content (text)
+<br/>
 blogImage (file)
+<br/>
 blogVideo (file, optional)
 
 
